@@ -24,6 +24,9 @@ function getRandomNo(min, max) {
 
 }
 
+
+
+
 function Store(name, min, max, avgCookie, cookiePurArray, total) {
     this.name = name
     this.min = min
@@ -77,15 +80,17 @@ const Paris = new Store("Paris", 23, 65, 6.3, [], 0);
 
 const Lima = new Store("Lima", 23, 65, 6.3, [], 0);
 
-Seattle.render();
 
-Tokyo.render();
+Seattle.render();
 
 Dubai.render();
 
 Tokyo.render();
 
 Paris.render();
+
+Lima.render();
+
 
 
 const footerRowEl = document.createElement("tr");
@@ -95,12 +100,59 @@ const thFoot1 = document.createElement("th");
 footerRowEl.appendChild(thFoot1);
 thFoot1.textContent = "Hourly total";
 
-
 for (let i = 0; i < totOfTot.length; i++) {
     const thFoot2 = document.createElement('th');
     footerRowEl.appendChild(thFoot2);
     thFoot2.textContent = totOfTot[i];
 }
+
+
+
+const form = document.getElementById("cookie-form");
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    // console.log(event.target);
+
+    const name = event.target.name.value;
+    const min = event.target.min.value;
+    const max = event.target.max.value;
+    const avg = event.target.avg.value;
+
+
+    const store = new Store(name, min, max, avg, [], 0);
+    store.render()
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
