@@ -1,10 +1,10 @@
-* {
-   font-family: Arial, Helvetica, sans-serif;
-   color: #702a80;
+body {
+  font-family: 'Inconsolata', monospace;
    box-sizing: border-box;
-
+   background-color: antiquewhite;
   
 }
+
 
 table, th, td {
     border: 2px solid black;
@@ -18,7 +18,7 @@ table, th, td {
   }
   
   th {
-    background-color:#9fe1e6;
+    background-image: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
     color: rgb(59, 36, 36);
     border: black;
     padding: .5px;
@@ -29,70 +29,78 @@ table, th, td {
       padding: 4px;
   }
 
-  /* .............. index.html ...................................*/
+/* .............. index.html ...................................*/
+
+.headerht {
+  background-image: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+  padding: .8cm;
+  position: fixed;
+  top: 0;
+  width: 100%
+
+}
+
+
+header h1 {
+  text-align: center;
+  font-size: x-large;
+}
+
+.headerht p {
+  font-size: x-large;
+  font-family: 'Pacifico', cursive;
+}
+
+.headerht nav ul li {
+  display: inline;
+  position: relative;
+  left: 24cm;
+  top: .5cm;
+  padding: .7em;
+  font-size: large;
+}
+
+.headerht nav ul li a {
+  text-decoration: none;
+}
+
+.headerht nav ul {
+  list-style: none;
+}
+
+
+
+.headerht nav ul li:last-child {
+  background-color: #def0ea;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+
+
+.mainindex {
+  margin-top: 5cm;
+  margin-left: 4cm;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  gap: .6em;
+}
+
+.mainindex:nth-child(2) {
+  line-height: 30px;
+}
+
+
+.mainindex div p {
+  margin-top: 1.5em;
+}
+
   
-  .mainindex {
-    margin: 10px;
-  }
-  .headerstore {
-      align-content: center;
-
-  }
-  
-
-  .headerht {
-    background-color: #9fe1e6;
-    position: fixed;
-    top: 0;
-    width: 100%;
-
-  }
-
-  .welcome {
-    text-align: center;
-    padding: 8px;
-    font-weight: bold;
-
-  }
-
-
-
-  .headerht nav ul {
-    padding: 20px;
-  }
-
-  .headerht nav {
-    float: right;
-  }
-
-  .headerht nav ul li {
-    display: inline;
-    padding: 7px;
-    padding: 20px;
-
-  }
-   
-   
-  img {
-    width: 30%;
-  }
-
-  .mainindex {
-    margin-top: 3cm;
-    float: left;
-  }
-
-  .paragh {
-    float: right;
-    background-color: #c0a2a2;
-    padding: .5cm;
-    border-radius: 10px;
-  }
 
 /*------------------------ form --------------------------------*/
 
 .fieldset {
-  background-color: #9fe1e6;
+  background-image: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
   border-style: double;
   width: 50%;
 }
