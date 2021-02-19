@@ -91,8 +91,6 @@ Paris.render();
 
 Lima.render();
 
-
-
 const footerRowEl = document.createElement("tr");
 tableEl.appendChild(footerRowEl);
 
@@ -106,24 +104,53 @@ for (let i = 0; i < totOfTot.length; i++) {
     thFoot2.textContent = totOfTot[i];
 }
 
+/*
+test()
+function test() {
+    const form = document.getElementById("cookie-form");
+    const exsam = document.createElement("td");
+    dataRowEl.appendChild(form);
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = event.target.name.value;
+        const min = event.target.min.value;
+        const max = event.target.max.value;
+        const avg = event.target.avg.value;
+
+        let store = new Store(name, min, max, avg, [], 0);
+        return store.render()
 
 
-const form = document.getElementById("cookie-form");
-form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    // console.log(event.target);
+    })
+}
 
-    const name = event.target.name.value;
-    const min = event.target.min.value;
-    const max = event.target.max.value;
-    const avg = event.target.avg.value;
-
-    var store = new Store(name, min, max, avg, [], 0);
-
-    store.render()
+*/
 
 
-})
+test()
+
+function test() {
+    const form = document.getElementById("cookie-form");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        // console.log(event.target);
+
+        const name = event.target.name.value;
+        const min = event.target.min.value;
+        const max = event.target.max.value;
+        const avg = event.target.avg.value;
+
+        let store = new Store(name, min, max, avg, [], 0);
+        return store.render()
+
+
+    })
+}
+
+
+
 
 
 
