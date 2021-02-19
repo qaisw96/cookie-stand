@@ -118,8 +118,8 @@ form.addEventListener("submit", function (event) {
     const max = event.target.max.value;
     const avg = event.target.avg.value;
 
+    var store = new Store(name, min, max, avg, [], 0);
 
-    const store = new Store(name, min, max, avg, [], 0);
     store.render()
 
 
